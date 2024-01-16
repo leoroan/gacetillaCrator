@@ -42,9 +42,10 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" onclick="save()" data-bs-dismiss="modal">Enviar</button>
-        <button type="button" class="btn btn-success" onclick="copyToClipboard('gacetilla')">Copiar</button>
-        <button type="button" class="btn btn-warning" onclick="downloadHtml('gacetilla')">Descargar</button>
+        <button type="button" class="btn btn-primary" onclick="save()" id="saveButton">Enviar</button>
+        <button type="button" class="btn btn-success" onclick="copyToClipboard('gacetilla')" data-bs-dismiss="modal">Copiar</button>
+        <button type="button" class="btn btn-warning" onclick="downloadHtml('gacetilla')" data-bs-dismiss="modal">Descargar</button>
+        <button type="button" class="btn btn-danger" onclick="reset()" data-bs-dismiss="modal">reset</button>
       </div>
     </div>
   </div>
