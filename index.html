@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Gacetilla Creators - MINTRP</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar gacetilla</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="titulo" class="form-label">Titulo:</label>
+            <input type="text" class="form-control" id="titulo" required>
+          </div>
+          <div class="mb-3">
+            <label for="subtitulo" class="form-label">Subtitulo:</label>
+            <input type="text" class="form-control" id="subtitulo" required>
+          </div>
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripcion:</label>
+            <textarea class="form-control" id="descripcion" rows="4" required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="save()">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<body>
+  <!-- Responsive navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Gacetilla Creator MT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div> -->
+    </div>
+  </nav>
+
+  <!-- Page content-->
+  <div class="container text-center">
+    <div class="row align-items-start mt-5">
+      <div class="col-8" id="gacetilla">
+        <div style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+          <table class="email-container" width="660">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="eddie-page">
+                    <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+                      <tbody>
+                        <tr style="background-color: transparent; background-image: none;">
+                          <td valign="top" class="stack-column" style="width: 100%;"><img width="auto" height="auto"
+                              class="fluid"
+                              style="border: 0px solid transparent; width: auto; height: auto; color: rgb(0, 0, 0); display: block; font-family: helvetica, arial, sans-serif; font-size: 10px; font-weight: normal; line-height: 1.35; margin: 0px; max-height: none; max-width: none; padding: 0px; text-decoration: none; min-height: 10px;"
+                              alt=""
+                              data-mce-src="http://cdn.pemres02.net/10276/headers-y-footers-mailingheader-min-1.png"
+                              dfsrc="http://cdn.pemres02.net/10276/headers-y-footers-mailingheader-min-1.png"
+                              src="http://cdn.pemres02.net/10276/headers-y-footers-mailingheader-min-1.png"
+                              saveddisplaymode="block"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+                      <tbody>
+                        <tr style="background-color: rgb(255, 255, 255);">
+                          <td valign="top" class="stack-column" style="width: 100%;"><img width="auto" height="auto"
+                              class="fluid"
+                              style="border: 0px solid transparent; width: auto; height: auto; color: rgb(0, 0, 0); display: block; font-family: helvetica, arial, sans-serif; font-size: 10px; font-weight: normal; line-height: 1.35; margin: 0px; max-height: none; max-width: none; padding: 0px; text-decoration: none; min-height: 10px;"
+                              alt="" data-mce-src="http://cdn.pemres02.net/10276/cintillo-gacetilla-2.png"
+                              dfsrc="http://cdn.pemres02.net/10276/cintillo-gacetilla-2.png"
+                              src="http://cdn.pemres02.net/10276/cintillo-gacetilla-2.png" saveddisplaymode="block">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+                      <tbody>
+                        <tr style="background-color: rgb(255, 255, 255);" class="">
+                          <td valign="top" class="stack-column" style="width: 100%;">
+                            <div align="center"
+                              style="border: 0px solid transparent; color: rgb(0, 0, 0); display: block; font-family: helvetica, arial, sans-serif; font-size: 33px; font-weight: normal; line-height: 1.2; margin: 15px 20px 5px; max-height: none; max-width: none; padding: 0px; text-decoration: none;"
+                              class="">
+                              <div id="mainTitulo" style="text-align: left;"><b
+                                  style="background-color: transparent;"><span
+                                    style="font-size: medium;">HÁBITAT</span></b>
+                              </div>
+                              <div id="mainSubtitulo" style="text-align: center;"><b><span
+                                    style="font-size: large;">Kicillof entregó
+                                    viviendas en Salto&nbsp;</span></b></div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+                      <tbody>
+                        <tr style="background-color: rgb(255, 255, 255);" class="selected-region">
+                          <td valign="top" class="stack-column" style="width: 100%;">
+                            <div class="container" style="text-align: justify;" id="mainDescripcion">
+                            </div>
+                            <!-- <div style="border: 0px solid transparent; color: rgb(0, 0, 0); display: block; font-family: helvetica, arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.35; margin: 15px; max-height: none; max-width: none; padding: 0px; text-decoration: none;"
+                                                  class="selected-element">
+                                                  <div style="text-align: justify;"><span
+                                                          style="background-color: transparent;"><i>Además,
+                                                              recorrió la obra de reconstrucción del Polo
+                                                              Deportivo Municipal Raúl “Ñato” Conti, que había
+                                                              sido destruido por un temporal.</i></span></div>
+                                                  <div style="text-align: justify;"><span
+                                                          style="background-color: transparent;"><br></span>
+                                                  </div>
+                                                  <div style="text-align: justify;">El gobernador de la
+                                                      provincia de Buenos Aires, Axel Kicillof, encabezó <span
+                                                          class="Object" role="link"
+                                                          id="OBJ_PREFIX_DWT204_com_zimbra_date">este
+                                                          viernes</span> el acto de entrega de 27 viviendas
+                                                      para familias del barrio Valacco, en el municipio de
+                                                      Salto, junto a la ministra de Hábitat y Desarrollo
+                                                      Urbano, Silvina Batakis; el asesor del gobernador,
+                                                      Agustín Simone; el intendente Ricardo Alessandro; y el
+                                                      secretario general de Coordinación municipal, Camilo
+                                                      Alessandro.&nbsp;</div>
+                                                  <div style="text-align: justify;"><br></div>
+                                                  <div style="text-align: justify;">En ese marco, Kicillof
+                                                      señaló: “En el interior de la provincia, a pesar de ser
+                                                      donde se lleva adelante gran parte de la producción
+                                                      rural del país, hay muchos bonaerenses que tienen
+                                                      dificultades para acceder a la tierra y la vivienda”.
+                                                      “El sector privado no lo resolvió, por esto es que hay
+                                                      un Estado presente que observa las necesidades y brinda
+                                                      respuesta: en estos cuatro años ya hemos construido 20
+                                                      mil viviendas”, subrayó.</div>
+                                                  <div style="text-align: justify;"><br></div>
+                                                  <div style="text-align: justify;">“Ahora nos quieren
+                                                      convencer de que el mercado nos va a resolver la vida,
+                                                      pero es culpa de los abusos y la diferencia de fuerzas
+                                                      que, mientras a algunos les va muy bien, otros no pueden
+                                                      acceder a su casa propia”, sostuvo el Gobernador y
+                                                      añadió: “Es por eso que vengo a reafirmar el compromiso
+                                                      de que en la provincia de Buenos Aires vamos a hacer
+                                                      todo lo que esté a nuestro alcance para que el ajuste
+                                                      del Gobierno Nacional no recaiga sobre los
+                                                      trabajadores”.</div>
+                                                  <div style="text-align: justify;"><br></div>
+                                                  <div style="text-align: justify;">A partir de una inversión
+                                                      de $267 millones, el gobierno provincial entregó 27
+                                                      viviendas en el barrio Valacco, correspondientes al
+                                                      programa “<span class="Object" role="link"
+                                                          id="OBJ_PREFIX_DWT205_com_zimbra_date">Mi</span>
+                                                      Casa, <span class="Object" role="link"
+                                                          id="OBJ_PREFIX_DWT206_com_zimbra_date">Mi</span>
+                                                      Hogar”, y completó de esta forma un proyecto que sumó 67
+                                                      soluciones habitacionales. El Instituto Cultural, en
+                                                      tanto, efectuó la entrega de bibliotecas para que cada
+                                                      casa cuente con una colección de títulos de Ediciones
+                                                      Bonaerenses, el sello estatal de la provincia, y un
+                                                      cuadro del Museo Provincial de Bellas Artes Emilio
+                                                      Pettoruti.</div>
+                                                  <div style="text-align: justify;"><br></div>
+                                                  <div style="text-align: justify;">Por su parte, Batakis
+                                                      sostuvo: “Este acto de entrega de viviendas es
+                                                      consecuencia de la decisión de nuestro Gobernador, quien
+                                                      ha definido políticas públicas para dar respuestas y
+                                                      soluciones a la problemática habitacional”. En la misma
+                                                      línea, Simone aseguró que “en la provincia hay un
+                                                      gobierno que se ha cargado al hombro el tema del hábitat
+                                                      durante los últimos cuatro años y lo seguirá haciendo en
+                                                      los cuatro años que vienen”.</div>
+                                                  <div style="text-align: justify;"><br></div>
+                                                  <div style="text-align: justify;">“Es un día muy especial
+                                                      para Salto porque es en los momentos más difíciles
+                                                      cuando se observa la solidaridad y el esfuerzo de
+                                                      nuestros vecinos y vecinas para cumplir sus sueños”,
+                                                      expresó el intendente Alessandro.</div>
+                                                  <div style="text-align: justify;"><br></div>
+                                                  <div style="text-align: justify;">Durante la jornada, las
+                                                      autoridades también recorrieron las obras de
+                                                      reconstrucción del Polo Deportivo Municipal Raúl “Ñato”
+                                                      Conti que había sufrido la destrucción del 70% de sus
+                                                      instalaciones a causa de un temporal.</div>
+                                                  <div style="text-align: justify;"><br></div>
+                                                  <div style="text-align: justify;">Por último, Kicillof
+                                                      resaltó que “cuando dicen que se paralizan todas las
+                                                      obras, no están castigando a un gobernador, sino a 17
+                                                      millones de bonaerenses que necesitan más viviendas, más
+                                                      salud y más educación”.</div>
+                                                  <div style="text-align: justify;"><br></div>
+                                                  <div style="text-align: justify;">Participaron de las
+                                                      actividades la jefa de Asesores del Gobernador, Cristina
+                                                      Álvarez Rodríguez; la presidenta del Instituto Cultural,
+                                                      Florencia Saintout; la diputada nacional Agustina
+                                                      Propato; el administrador general del Instituto de la
+                                                      Vivienda, Diego Menéndez; los intendentes de Colón,
+                                                      Waldemar Giordano; y de Ramallo, Mauro Poletti; el
+                                                      presidente del Concejo Deliberante local, Mario Julián
+                                                      Ainora; y el dirigente Marcos Di Palma.</div>
+                                                  <div style="text-align: justify;"><br></div>
+                                                  <div style="text-align: justify;"><b>Fotos</b>: <span
+                                                          class="Object" role="link"
+                                                          id="OBJ_PREFIX_DWT207_com_zimbra_url"><a target="_blank"
+                                                              href="https://drive.google.com/drive/folders/1Hp5yXwdut31kp1CypRi0NJ6pwSHmkHX8">https://drive.google.com/drive/folders/1Hp5yXwdut31kp1CypRi0NJ6pwSHmkHX8</a></span>
+                                                  </div>
+                                              </div> -->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+                      <tbody>
+                        <tr style="background-color: rgb(255, 255, 255);">
+                          <td valign="top" class="stack-column" style="width: 100%;"><img width="auto" height="auto"
+                              class="fluid"
+                              style="border: 0px solid transparent; width: auto; height: auto; color: rgb(0, 0, 0); display: block; font-family: helvetica, arial, sans-serif; font-size: 10px; font-weight: normal; line-height: 1.35; margin: 0px; max-height: none; max-width: none; padding: 0px; text-decoration: none; min-height: 10px;"
+                              alt=""
+                              data-mce-src="http://cdn.pemres02.net/10276/headers-y-footers-mailingfooter-pba-solo.png"
+                              dfsrc="http://cdn.pemres02.net/10276/headers-y-footers-mailingfooter-pba-solo.png"
+                              src="http://cdn.pemres02.net/10276/headers-y-footers-mailingfooter-pba-solo.png"
+                              saveddisplaymode="block"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+                      <tbody>
+                        <tr style="background-color: rgb(255, 255, 255);">
+                          <td valign="top" class="center-on-narrow stack-column" style="width: 50%;">
+                            <div
+                              style="border: 0px solid transparent; color: rgb(255, 255, 255); display: block; font-family: helvetica, arial, sans-serif; font-size: 10px; font-weight: normal; line-height: 1.35; margin: 20px; max-height: none; max-width: none; padding: 0px; text-decoration: none;">
+                              <span style="font-size: xx-small;"><span style="color: rgb(158, 158, 158);">© 2019
+                                  Gobierno
+                                  de La Provincia de Buenos Aires</span><br></span>
+                            </div>
+                          </td>
+                          <td valign="top" align="right" class="center-on-narrow stack-column"
+                            style="width: 50%; vertical-align: bottom;"><span class="eddie-wrapper"
+                              style="display: inline-block; margin: 10px 10px 10px 0px;"><span class="Object"
+                                role="link" id="OBJ_PREFIX_DWT208_com_zimbra_url"><a
+                                  href="https://www.facebook.com/BAProvincia/" style="text-decoration: none;"
+                                  target="_blank" rel="nofollow noopener noreferrer"><img alt="Facebook" width="auto"
+                                    height="auto" class="fluid"
+                                    style="border: 0px solid transparent; width: auto; height: auto; color: rgb(0, 0, 0); display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 10px; font-weight: normal; line-height: 1.35; margin: 0px; max-height: none; max-width: none; padding: 0px; text-decoration: none;"
+                                    data-mce-src="http://cdn.pemres02.net/_shared/redes-sociales/facebook/32x32/facebook-circulo-gris.png"
+                                    dfsrc="http://cdn.pemres02.net/_shared/redes-sociales/facebook/32x32/facebook-circulo-gris.png"
+                                    src="http://cdn.pemres02.net/_shared/redes-sociales/facebook/32x32/facebook-circulo-gris.png"
+                                    saveddisplaymode="inline-block"></a></span></span><span class="eddie-wrapper"
+                              style="display: inline-block; margin: 10px 10px 10px 0px;"><span class="Object"
+                                role="link" id="OBJ_PREFIX_DWT209_com_zimbra_url"><a
+                                  href="https://twitter.com/BAProvincia/" style="text-decoration: none;" target="_blank"
+                                  rel="nofollow noopener noreferrer"><img alt="Twitter" width="auto" height="auto"
+                                    class="fluid"
+                                    style="border: 0px solid transparent; width: auto; height: auto; color: rgb(0, 0, 0); display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 10px; font-weight: normal; line-height: 1.35; margin: 0px; max-height: none; max-width: none; padding: 0px; text-decoration: none;"
+                                    data-mce-src="http://cdn.pemres02.net/_shared/redes-sociales/twitter/32x32/twitter-circulo-gris.png"
+                                    dfsrc="http://cdn.pemres02.net/_shared/redes-sociales/twitter/32x32/twitter-circulo-gris.png"
+                                    src="http://cdn.pemres02.net/_shared/redes-sociales/twitter/32x32/twitter-circulo-gris.png"
+                                    saveddisplaymode="inline-block"></a></span></span><span class="eddie-wrapper"
+                              style="display: inline-block; margin: 10px 10px 10px 0px;"><span class="Object"
+                                role="link" id="OBJ_PREFIX_DWT210_com_zimbra_url"><a
+                                  href="https://www.instagram.com/provinciaba/" style="text-decoration: none;"
+                                  target="_blank" rel="nofollow noopener noreferrer"><img alt="Twitter" width="auto"
+                                    height="auto" class="fluid"
+                                    style="border: 0px solid transparent; width: auto; height: auto; color: rgb(0, 0, 0); display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 10px; font-weight: normal; line-height: 1.35; margin: 0px; max-height: none; max-width: none; padding: 0px; text-decoration: none;"
+                                    data-mce-src="http://cdn.pemres02.net/_shared/redes-sociales/instagram/32x32/instagram-circulo-gris.png"
+                                    dfsrc="http://cdn.pemres02.net/_shared/redes-sociales/instagram/32x32/instagram-circulo-gris.png"
+                                    src="http://cdn.pemres02.net/_shared/redes-sociales/instagram/32x32/instagram-circulo-gris.png"
+                                    saveddisplaymode="inline-block"></a></span></span><span class="eddie-wrapper"
+                              style="display: inline-block; margin: 10px 10px 10px 0px;"><span class="Object"
+                                role="link" id="OBJ_PREFIX_DWT211_com_zimbra_url"><a
+                                  href="https://www.youtube.com/BAprovincia" style="text-decoration: none;"
+                                  target="_blank" rel="nofollow noopener noreferrer"><img alt="LinkedIn" width="auto"
+                                    height="auto" class="fluid"
+                                    style="border: 0px solid transparent; width: auto; height: auto; color: rgb(0, 0, 0); display: inline-block; font-family: helvetica, arial, sans-serif; font-size: 10px; font-weight: normal; line-height: 1.35; margin: 0px; max-height: none; max-width: none; padding: 0px; text-decoration: none;"
+                                    data-mce-src="http://cdn.pemres02.net/_shared/redes-sociales/youtube/32x32/youtube-circulo-gris.png"
+                                    dfsrc="http://cdn.pemres02.net/_shared/redes-sociales/youtube/32x32/youtube-circulo-gris.png"
+                                    src="http://cdn.pemres02.net/_shared/redes-sociales/youtube/32x32/youtube-circulo-gris.png"
+                                    saveddisplaymode="inline-block"></a></span></span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary align-items-end col-1 " data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">
+        Editar
+      </button>
+      <button type="button" class="btn btn-success align-items-end col-1 mx-2" onclick="copyToClipboard('gacetilla')">
+        Copiar
+      </button>
+    </div>
+  </div>
+  <!-- Bootstrap core JS-->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
